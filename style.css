@@ -1,0 +1,1178 @@
+:root{
+  --amountSnow: infinite;
+}
+
+@font-face {
+  font-family: HigherJump;
+  src: url(Higher\ Jump.ttf);
+}
+
+
+/* *, *:before, *:after {
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+   
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+   
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+} */
+
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width:100svw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container{
+  width: 100svw;
+  height:100vh;
+  position: absolute;
+  overflow-x: hidden;
+  background-color: #eeeeed;
+  overflow-y: hidden;
+
+}
+
+.screenshot{
+  top:0;
+  left:0;
+  position: absolute;
+  width:100%;
+  opacity: 0;
+  /* opacity: 1; */
+}
+
+.first-page{
+  width:100dvw;
+  height:100dvh;
+  font-family: HigherJump, Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  /* background: linear-gradient(to bottom,#eeeeed 90%, #e0e0e0 100%); */
+  position: relative;
+  z-index: 10;
+  /* mix-blend-mode: lighten; */
+}
+
+.p-1-BG-morning,
+.p-1-BG-night{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+
+.p-1-BG-morning{
+  background: linear-gradient(to bottom,#eeeeed 90%, #e0e0e0 100%);
+}
+
+.p-1-BG-night{
+  height:calc(100% + 1px);
+  background: #202B3C;
+}
+
+
+
+.first-page p{
+  font-size: min(5vw, 15vh);
+  /* color: #333; */
+}
+
+.title-1{
+  translate: 0 11%;
+  color:hsl(195, 25%, 80%);
+}
+
+.title-2{
+  translate: 0 -11%;
+  color:hsl(195, 25%, 80%);
+
+}
+
+.p-1{
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  /* min-height: 200vh; */
+  /* aspect-ratio: 8/15; */
+  z-index: 1;
+  /* above p2 cause it's a transition */
+  /* border-bottom: hsl(60, 3%, 93%) 2px solid; */
+  border-bottom: #202B3C 2px solid;
+}
+
+.p-1-container{
+  background-color: #202B3C;
+  width: 100vw;
+  aspect-ratio: 7.5/10;
+  /* position: -webkit-sticky; */
+  /* position: sticky; */
+  /* top: 12%; */
+}
+
+/* .p-2{
+  height: 200vh;
+  width:100vw;
+  background-color: red;
+} */
+
+.p-1 svg{
+  width:100vw;
+}
+
+.mountain-colour{
+  background-color: #202B3C;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 8%;
+}
+
+.mountain-colour2{
+  position: sticky;
+  top:0;
+  width:100%;
+  height: 43vh;
+  background-color: #202B3C;
+}
+
+.p-1-mountains{
+  position: absolute;
+  top:0;
+  width:105vw;
+  /* transform: translate(-1%, 0); */
+  /* filter: invert(1) sepia(0.6) invert(1) hue-rotate(-10deg) brightness(0.6); */
+  transform: translate(-2.5%, 0);
+}
+
+.p-1 .p-1-mountains-night{
+  width:105vw;
+
+  position: absolute;
+  top:0;
+  transform: translate(-2.5%, 0);
+}
+
+.p-1-bg-trees{
+  position: absolute;
+  top:48vw;
+  /* scale:1; */
+  /* transform: translate(-2.6%, 0); */
+  transform: translate(-2.6%, 0);
+  /* filter: invert(1) sepia(0.6) invert(1) hue-rotate(-10deg) brightness(0.6); */
+
+}
+.p-1-bg-trees-night{
+  position: absolute;
+  top:52vw;
+  scale:1.05;
+  transform: translate(-2.6%, 0);
+}
+
+.p-1 .p-1-back-tree{
+  position: absolute;
+  top:51vw;
+  left:50%;
+  width:13vw;
+  /* transform: translate(-50%, 0); */
+  transform: translate(-50%, -4vw);
+  /* filter: invert(1) sepia(0.6) invert(1) hue-rotate(-10deg) brightness(0.6); */
+}
+.p-1 .p-1-back-tree-night{
+  position: absolute;
+  top:51vw;
+  left:50%;
+  width:13vw;
+  transform: translate(-50%, -4vw);
+}
+
+.p-1 .p-1-house-trees{
+  position: absolute;
+  width: 86vw;
+  left:50%;
+  top:40vw;
+  /* transform: translate(-48%, 0); */
+  transform: translate(-48%, 0vw);
+  /* mix-blend-mode: darken; */
+  /* visibility: visible !important; */
+  /* filter: invert(1) sepia(0.6) invert(1) hue-rotate(-10deg) brightness(0.6); */
+
+}
+
+.p-1 .p-1-house-trees-night{
+  position: absolute;
+  width: 86vw;
+  left:49%;
+  top:39vw;
+  transform: translate(-46.5%, 0vw);
+  /* mix-blend-mode: multiply; */
+  /* opacity: 1; */
+}
+
+.p-1 .p-1-house{
+  position: absolute;
+  width: 31.125vw;
+  left:50%;
+  top:72.5vw;
+  /* transform: translate(-48%, 0); */
+  transform: translate(-48%, 0vw);
+}
+.p-1 .p-1-house-night{
+  position: absolute;
+  width: 31.125vw;
+  left:50.1%;
+  top:72.3vw;
+  transform: translate(-48%, 0vw);
+  mix-blend-mode: multiply;
+}
+
+.p-1 .p-1-front-trees{
+  position: absolute;
+  width: 84vw;
+  left:50%;
+  top:24.5vw;
+  /* transform: translate(-48.9%, 0); */
+  transform: translate(-48.8%, 0vw);
+  /* filter: invert(1) sepia(0.6) invert(1) hue-rotate(-10deg) brightness(0.6); */
+}
+
+.p-1 .p-1-front-trees-night{
+  position: absolute;
+  width: 84vw;
+  left:50%;
+  top:25.5vw;
+  transform: translate(-48.8%, 0vw);
+}
+
+.p-1 .p-1-lake{
+  position: absolute;
+  width: 79vw;
+  left:50%;
+  top: 108vw;
+  /* transform: translate(-50.1%, 0); */
+  transform: translate(-50.1%, 0vw);
+}
+
+.p-1-lake-night{
+  /* mix-blend-mode: multiply; */
+  position: absolute;
+  width: 79vw;
+  left:50%;
+  top: 100.8vw;
+  transform: translate(-50.1%, 0vw);
+}
+
+.p-1-morning{
+  visibility: hidden;
+}
+
+.p-1-container .p-1-night{
+  filter:brightness(0.8);
+}
+
+.first-page,
+.container,
+.mountain-colour{
+  background-color: #202B3C;
+}
+
+
+
+
+
+
+
+
+
+/* --------------- SNOW SVG --------------- */
+
+.snow-container{
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  overflow: hidden;
+  top:0;
+  left:0;
+  pointer-events: none;
+  z-index: 11;
+  /* first-page is on 10.. idk why */
+  transition: opacity 1s ease 0.5s;
+  opacity: 0.1;
+}
+
+.snowSVG{
+  position: absolute;
+  left:0;
+  top:0;
+  overflow: hidden;
+  /* filter:contrast(0.5) brightness(1.7); */
+  filter: contrast(0.6) sepia(1) hue-rotate(180deg) saturate(2) contrast(0.8) brightness(0.65);
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: allSVGs 1s linear 0s var(--amountSnow) both;
+}
+
+.svgTop{
+  translate:0 -98%;
+}
+
+.svgTopRight{
+  translate:98% -98%;
+}
+
+.svgRight{
+  translate: 98% 0;
+}
+
+.snowSVGStill{
+  position: absolute;
+  left:0;
+  top:0;
+  overflow: hidden;
+  translate: 0.6% -0.2%;
+  /* filter:contrast(0.5) brightness(1.7); */
+  filter: contrast(0.6) sepia(1) hue-rotate(180deg) saturate(2) contrast(0.8) brightness(0.65);
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: svgDisplay 1s linear 0.05s var(--amountSnow) both;
+  opacity: 0;
+}
+
+@keyframes allSVGs {
+  0%{
+    transform: translate(-1%, 1%);
+  }
+  100%{
+    transform: translate(-98%, 98%);
+  }
+
+}
+
+@keyframes svgDisplay {
+  0%{
+    opacity: 0;
+  }
+  88%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 1;
+  }
+  
+  95%{
+    opacity: 1;
+  }
+  98%{
+    opacity: 0;
+  }
+}
+
+/* --------------- ---- --- --------------- */
+
+.p-1-night{
+  transition: opacity 1s ease 1s;
+  z-index: 10;
+}
+
+.p-1-house{
+  z-index: 10;
+  /* needs same index, otherwise it will be hidden in the back */
+}
+
+.p-1-BG-night{
+  transition: opacity 1s ease 1s;
+}
+
+.p-1-titles{
+  transition: color 1s ease 1s;
+}
+
+.container,
+.mountain-colour,
+.mountain-colour2,
+.p-1-container{
+  transition: background-color 1s ease 1s;
+}
+
+.p-1{
+  transition: background-color 1s ease 1s, border-bottom 1s ease 1s;
+}
+
+
+/* .snow-container{
+  opacity: 0;
+}
+
+.p-1-night{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-1-morning{
+  visibility: visible;
+  opacity: 1;
+}
+
+.container{
+  
+}
+
+.p-1{
+  background-color: #eeeeed;
+}
+
+.first-page{
+  background: linear-gradient(to bottom,#eeeeed 90%, #e0e0e0 100%);
+}
+
+.mountain-colour{
+  background-color: #e0e0e0;
+}
+
+.title-1,
+.title-2{
+  color: #333;
+} */
+
+/* --------------- ---- --- --------------- */
+
+.audioWinterWind{
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 1000;
+  display: none;
+}
+
+.kidRunSFX{
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 1000;
+  display: none;
+}
+
+.walkSnow{
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 1000;
+  display: none;
+}
+
+.clickToStart{
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  height:100%;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  backdrop-filter: blur(30px);
+}
+
+.clickToStart div{
+  background-color: rgba(191, 210, 217, 0.8);
+  padding: 2rem;
+  font-size: min(10vh, 9vw);
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #202B3C;
+  border-radius: min(1vh, 0.9vw);
+}
+
+.clickToStart p{
+  font-size: min(10vh, 9vw);
+}
+
+.clickToStart span{
+  font-weight: normal;
+  font-size: min(3vh, 2.5vw);
+  opacity: 0.6;
+}
+
+/* --------------- ---- --- --------------- */
+
+.p-2{
+  position: relative;
+  height:125vh;
+  /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p2HEIGHT */
+  width:100%;
+  display: none;
+  overflow: hidden;
+  background-color: #4B4B4B;
+  background-color: #424141;
+  background-color: #fff;
+}
+
+.p-2-bg-svg{
+  position: absolute;
+  left:53%;
+  top:61%;
+  translate:-50% -50%;
+  width: min(110vw, 127vh);
+  /* border: 1px solid #4B4B4B; */
+  /* border: 1px solid #424141; */
+}
+
+.p-2-overlay-svg{
+  position: absolute;
+  left:53%;
+  top:61%;
+  translate:-50.2% -50%;
+  width: min(110vw, 127vh);
+  mix-blend-mode: multiply;
+  opacity: 0.72;
+}
+
+.p-2-overlay{
+  background-color: #424141;
+  position: absolute;
+  width:100%;
+  height:100%;
+  mix-blend-mode: multiply;
+}
+
+.p-2-overlay-white{
+  background-color: #fff;
+  position: absolute;
+  /* width:100%; */
+  /* height:100%; */
+  aspect-ratio: 532/657;
+  left:53%;
+  top:61%;
+  translate:-50.16% -50%;
+  scale: 0.996;
+  width: min(110vw, 127vh); 
+}
+
+.p-2-overlay-stroke{
+  position: absolute;
+  width:100%;
+  height:100%;
+}
+
+.p-2-overlay-border{
+  position: absolute;
+  aspect-ratio: 532/657;
+  left:53%;
+  top:61%;
+  translate:-50.16% -50%;
+  scale: 1.001;
+  width: min(110vw, 127vh); 
+  border: 5px solid #424141;
+}
+
+.p-2-kid{
+  /* 11vw 12.7vh */
+  width: min(44vw, 50.8vh);
+  aspect-ratio: 1;
+  /* background-color: red; */
+  position: absolute;
+  filter: saturate(1.1) brightness(0.8) contrast(1.5);
+  top:63%;
+  translate: -50% -15%;
+  translate: -200% 10%;
+  left:50%;
+}
+
+.p-2-kid svg{
+  position: absolute;
+  left:50%;
+  top:50%;
+  translate: -50% -50%;
+  height:100%;
+}
+
+.p-2-kid-2,
+.p-2-kid-3,
+.p-2-kid-4{
+  opacity: 1;
+  display: none;
+}
+
+.p-2-kid-1{
+  opacity: 1;
+}
+
+@keyframes kidRun {
+  0%{
+    filter: saturate(1.1) brightness(0.6) contrast(1.5);
+    translate: -200% 10%;
+  }
+  
+  75%{
+    translate: -60% 10%;
+  }
+  80%{
+    translate: -60% 10%;
+  }
+  
+  100%{
+    translate: -18% -3%;
+    filter: saturate(1.1) brightness(0.8) contrast(1.5);
+  }
+}
+
+@keyframes kidRun1 {
+  0%{
+    display: block;
+  }
+  25%{
+    display: block;
+  }
+  26%{
+    display: none;
+  }
+  100%{
+    display: none;
+  }
+}
+
+@keyframes kidRun2 {
+  0%{
+    display: none;
+  }
+  25%{
+    display: none;
+  }
+  26%{
+    display: block;
+  }
+  50%{
+    display: block;
+  }
+  51%{
+    display: none;
+  }
+  100%{
+    display: none;
+  }
+}
+
+@keyframes kidRun3 {
+  0%{
+    display: none;
+  }
+  50%{
+    display: none;
+  }
+  51%{
+    display: block;
+  }
+  75%{
+    display: block;
+  }
+  76%{
+    display: none;
+  }
+  100%{
+    display: none;
+  }
+}
+
+@keyframes kidRun4 {
+  0%{
+    display: none;
+  }
+  75%{
+    display: none;
+  }
+  76%{
+    display: block;
+  }
+  100%{
+    display: block;
+  }
+}
+
+.p-2-dark-transition{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:20%;
+  background: linear-gradient(to bottom, rgba(238, 238, 237, 1), rgba(238, 238, 237, 0));
+  color: hsl(60, 3%, 93%);
+    background: linear-gradient(to bottom,
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.738) 19%,
+    hsla(0, 0%, 0%, 0.541) 34%,
+    hsla(0, 0%, 0%, 0.382) 47%,
+    hsla(0, 0%, 0%, 0.278) 56.5%,
+    hsla(0, 0%, 0%, 0.194) 65%,
+    hsla(0, 0%, 0%, 0.126) 73%,
+    hsla(0, 0%, 0%, 0.075) 80.2%,
+    hsla(0, 0%, 0%, 0.042) 86.1%,
+    hsla(0, 0%, 0%, 0.021) 91%,
+    hsla(0, 0%, 0%, 0.008) 95.2%,
+    hsla(0, 0%, 0%, 0.002) 98.2%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  background: linear-gradient(to bottom,
+    hsl(60, 3%, 93%) 0%,
+    hsla(60, 3%, 93%, 0.738) 19%,
+    hsla(60, 3%, 93%, 0.541) 34%,
+    hsla(60, 3%, 93%, 0.382) 47%,
+    hsla(60, 3%, 93%, 0.278) 56.5%,
+    hsla(60, 3%, 93%, 0.194) 65%,
+    hsla(60, 3%, 93%, 0.126) 73%,
+    hsla(60, 3%, 93%, 0.075) 80.2%,
+    hsla(60, 3%, 93%, 0.042) 86.1%,
+    hsla(60, 3%, 93%, 0.021) 91%,
+    hsla(60, 3%, 93%, 0.008) 95.2%,
+    hsla(60, 3%, 93%, 0.002) 98.2%,
+    hsla(60, 3%, 93%, 0) 100%
+  );
+}
+
+/* --------------- ---- --- --------------- */
+.p-3{
+  position: relative;
+  /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  height:110vh; /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  width:100%;
+  background-color: #fff;
+  display: none;
+}
+/* 
+.p-3-svg-scenery,
+.p-3-persons{
+  visibility: hidden;
+} */
+
+.p-3-svg{
+  position: absolute;
+  left:50%;
+  top:50.2%;
+  width: min(90vw, 110vh);
+  translate:-50% calc(-50% + 5vh);
+}
+
+.p-3-persons{
+  will-change: scroll-position;
+}
+
+.p-3-character{
+  transform: skew(2deg, 20deg);
+  translate: -12% -20%;
+  will-change: scroll-position;
+  /* mix-blend-mode: multiply; */
+  /* animation: p3Character1 4s linear forwards, p3Character2 1s ease 4s forwards; */
+}
+
+.p-3-ground{
+  clip-path: polygon(0 0, 51% 0, 51% 100%, 0 100%);
+  /* animation: p3Ground 8s linear both; */
+  will-change: scroll-position;
+}
+
+.p-3-transition-top{
+  position: absolute;
+  width:100%;
+  height:18%;
+  background: linear-gradient(to bottom,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0.738) 19%,
+    hsla(0, 0%, 25%, 0.541) 34%,
+    hsla(0, 0%, 25%, 0.382) 47%,
+    hsla(0, 0%, 25%, 0.278) 56.5%,
+    hsla(0, 0%, 25%, 0.194) 65%,
+    hsla(0, 0%, 25%, 0.126) 73%,
+    hsla(0, 0%, 25%, 0.075) 80.2%,
+    hsla(0, 0%, 25%, 0.042) 86.1%,
+    hsla(0, 0%, 25%, 0.021) 91%,
+    hsla(0, 0%, 25%, 0.008) 95.2%,
+    hsla(0, 0%, 25%, 0.002) 98.2%,
+    hsla(0, 0%, 25%, 0) 100%
+  );
+}
+
+
+@keyframes p3Character1 {
+  0%{translate: -12% -20%;}
+  5%{translate: -11% -20%;}
+  10%{translate: -11% -20%;}
+  15%{translate: -10% -20%;}
+  20%{translate: -10% -20%;}
+  25%{translate: -9% -20%;}
+  30%{translate: -9% -20%;}
+  35%{translate: -8% -20.1%;}
+  40%{translate: -8% -20.1%;}
+  45%{translate: -7% -20.1%;}
+  50%{translate: -7% -20.1%;}
+  55%{translate: -6% -20.2%;}
+  60%{translate: -6% -20.2%;}
+  65%{translate: -5% -20.2%;}
+  70%{translate: -5% -20.2%;}
+  75%{translate: -4% -20.2%;}
+  80%{translate: -4% -20.2%;}
+  85%{translate: -3% -20.1%;}
+  90%{translate: -3% -20.1%;}
+  95%{translate: -2% -20.1%;}
+  100%{translate: -2% -20.1%;}
+}
+
+
+@keyframes p3Character2{
+  0%{
+    transform: skew(2deg, 20deg);
+    translate: -2% -20.1%
+  }
+  100%{
+    transform: skew(0deg, 0deg);
+    translate: 0% 0.5%
+  }
+}
+
+@keyframes p3Ground1 {
+  0%{
+    clip-path: polygon(0 0, 53% 0, 53% 100%, 0 100%);
+  }
+  100%{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes p3Ground {
+  0%{clip-path: polygon(0 0, 51% 0, 51% 100%, 0 100%)}
+  5%{clip-path: polygon(0 0, 56% 0, 56% 100%, 0 100%)}
+  10%{clip-path: polygon(0 0, 56% 0, 56% 100%, 0 100%)}
+  15%{clip-path: polygon(0 0, 61% 0, 61% 100%, 0 100%)}
+  20%{clip-path: polygon(0 0, 61% 0, 61% 100%, 0 100%)}
+  25%{clip-path: polygon(0 0, 66% 0, 66% 100%, 0 100%)}
+  30%{clip-path: polygon(0 0, 66% 0, 66% 100%, 0 100%)}
+  35%{clip-path: polygon(0 0, 71% 0, 71% 100%, 0 100%)}
+  40%{clip-path: polygon(0 0, 71% 0, 71% 100%, 0 100%)}
+  45%{clip-path: polygon(0 0, 76% 0, 76% 100%, 0 100%)}
+  50%{clip-path: polygon(0 0, 76% 0, 76% 100%, 0 100%)}
+  55%{clip-path: polygon(0 0, 81% 0, 81% 100%, 0 100%)}
+  60%{clip-path: polygon(0 0, 81% 0, 81% 100%, 0 100%)}
+  65%{clip-path: polygon(0 0, 86% 0, 86% 100%, 0 100%)}
+  70%{clip-path: polygon(0 0, 86% 0, 86% 100%, 0 100%)}
+  75%{clip-path: polygon(0 0, 91% 0, 91% 100%, 0 100%)}
+  80%{clip-path: polygon(0 0, 91% 0, 91% 100%, 0 100%)}
+  85%{clip-path: polygon(0 0, 96% 0, 96% 100%, 0 100%)}
+  90%{clip-path: polygon(0 0, 96% 0, 96% 100%, 0 100%)}
+  95%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)}
+  100%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)}
+}
+
+/* --------------- ---- --- --------------- */
+
+.p-4{
+  position: relative;
+  /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  height:200vw; /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  /* IF YOU UPDATE HEIGHT, UPDATE IT IN js p3HEIGHT */
+  width:100%;
+  background-color: #fff;
+  display: none;
+}
+
+.p-4-svg{
+  width: min(28vw);
+}
+
+.p-4-snowman{
+  filter: brightness(1.02);
+  position: absolute;
+  top:3%;
+  left:6%;
+}
+
+.p-4-slide{
+  position: absolute;
+  top:12%;
+  left:50%;
+  translate: -50% 0;
+}
+
+.p-4-forest{
+  width: min(43vw);
+  position: absolute;
+  top:16%;
+  right:-1%;
+  mix-blend-mode: multiply;
+}
+
+.p-4-forest-trees{
+  mix-blend-mode: darken;
+}
+
+.p-4-forest-bg{
+  animation: forestBG 20s ease infinite both;
+  will-change: scroll-position;
+}
+
+.p-4-forest-tree-top-left{
+  animation: forestTree 20s ease infinite both;
+  will-change: scroll-position;
+}
+
+.p-4-forest-tree-bot-right{
+  animation: forestTree 20s ease infinite both;
+  will-change: scroll-position;
+
+}
+
+
+
+.p-4-snowman-hand{
+  transform-origin: 56% 48%;
+  rotate:0deg;
+  animation: snowHand 8s ease infinite both;
+  will-change: scroll-position;
+}
+
+.p-4-boy-hand{
+  transform-origin: 71% 57%;
+  rotate: 0deg;
+  animation: boyHand 8s ease infinite both;
+  will-change: scroll-position;
+}
+
+.p-4-girl-hand{
+  transform-origin: 40% 60%;
+  rotate: -2deg;
+  animation: girlHand 8s ease infinite both;
+  will-change: scroll-position;
+}
+
+@keyframes boyHand {
+  0%{
+    rotate: 0deg;
+    translate: 0% 0%;
+  }
+  20%{
+    rotate: 0deg;
+    translate: 0% -1%;
+  }
+  30%{
+    rotate: 0deg;
+    translate: 0% -0.5%;
+  }
+  50%{
+    rotate: 0deg;
+    translate: 0% 0%;
+  }
+  70%{
+    rotate: 0deg;
+    translate: 0% 0%;
+  }
+  80%{
+    rotate: 16deg;
+    translate: -0.5% -1%;
+  }
+  90%{
+    rotate: 16deg;
+    translate: -0.5% -1%;
+  }
+  100%{
+    rotate: 0deg;
+    translate: 0% 0%;
+  }
+}
+
+@keyframes snowHand{
+  0%{
+    rotate: 0deg;
+  }
+  50%{
+    rotate: 0deg;
+  }
+  60%{
+    rotate: 2deg;
+  }
+  70%{
+    rotate: 16deg;
+  }
+  80%{
+    rotate: 0deg;
+  }
+  90%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 0deg;
+  }
+
+}
+
+@keyframes girlHand{
+  0%{
+    rotate: -2deg;
+  }
+  5%{
+    rotate: -9deg;
+  }
+  8%{
+    rotate: -2deg;
+  }
+  12%{
+    rotate: -9deg;
+  }
+  15%{
+    rotate: -2deg;
+  }
+  50%{
+    rotate: -2deg;
+  }
+  55%{
+    rotate: -9deg;
+  }
+  60%{
+    rotate: -2deg;
+  }
+  100%{
+    rotate: -2deg;
+  }
+}
+
+
+.p-4-slide-slide{
+  /* opacity: 0; at start */
+  /* translate: 14% -22.1%; */
+  /* translate: 10% -16.1%; */
+  /* translate: 3% -7.1%; */
+  /* translate: 0% 0%; */
+  /* translate: -9% 10%; */
+  /* translate: -22% 14%; */
+  /* translate: -40% 22%; */
+  /* opacity: 0; right after that*/
+  will-change: scroll-position;
+  animation: boySlide 8s linear infinite both;
+}
+
+@keyframes boySlide {
+  0%{opacity: 0; translate: 14% -22.1%;}
+  10%{opacity: 1; translate: 14% -22.1%;}
+  20%{opacity: 1; translate: 14% -22.1%;}
+  30%{translate: 10% -16.1%;}
+  40%{translate: 3% -7.1%;}
+  50%{translate: 0;}
+  60%{translate: -9% 10%;}
+  70%{translate: -22% 14%;}
+  80%{translate: -40% 22%; opacity: 1;}
+  81%{translate: -41% 23%; opacity: 0;}
+  82%{opacity: 0; translate: 14% -22.1%;}
+  100%{opacity: 0; translate: 14% -22.1%;}
+}
+
+.p-4-slide-walk{
+  transform-origin: 91% 63%;
+  /* translate: 4% 22%; */
+  /* translate: 1% 16%; */
+  /* translate: 0% 1%; */
+  /* translate: 3% -4%; */
+  /* translate: -2% -14%; */
+  /* translate: 7% -28%; */
+  will-change: scroll-position;
+  animation: slideWalk 15s linear infinite both;
+}
+
+@keyframes slideWalk {
+ 0%{opacity: 0; translate: 6% 23%; scale:1.15;} 
+ 8%{opacity: 0;}
+ 9%{opacity: 1; translate: 4% 22%;} 
+ 23%{opacity: 1; translate: 1% 16%;} 
+ 42%{opacity: 1; translate: 0% 1%;} 
+ 49%{opacity: 1; translate: 3% -4%;} 
+ 65%{opacity: 1; translate: -2% -14%;} 
+ 94%{opacity: 1; translate: 7% -28%;} 
+ 95%{opacity: 0; translate: 8% -28.5%;} 
+ 96%{opacity: 0; translate: 6% 23%;} 
+ 100%{opacity: 0; translate: 8% -28.5%; scale:0.9;} 
+}
+
+@keyframes forestBG {
+  0%{translate: 0% 0%;}
+  25%{translate: 1% 1%;}
+  50%{translate: -1% -1%;}
+  75%{translate: 2% -1%;}
+  0%{translate: 0% 0%;}
+}
+
+@keyframes forestTree {
+  0%{translate: 0% 0%;}
+  25%{translate: 2% 2%;}
+  50%{translate: -2% -2%;}
+  75%{translate: 4% -2%;}
+  0%{translate: 0% 0%;}
+}
+
+.p-4{
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.p-4-text-1{
+  position: absolute;
+  left:50%;
+  top:80vw;
+  translate:-50% -50%;
+  text-align: center;
+  width:80%;
+  font-size: min(3vw);
+}
+
+.p-4-text-2{
+  position: absolute;
+  left:50%;
+  top:100vw;
+  translate:-50% -50%;
+  text-align: center;
+  width:80%;
+  font-size: min(3vw);
+}
+
+.p-4-text-3{
+  position: absolute;
+  left:50%;
+  top:120vw;
+  translate:-50% -50%;
+  text-align: center;
+  width:80%;
+  font-size: min(3vw);
+}
+
+.p-4-learn-more{
+  position: absolute;
+  left:50%;
+  top:140vw;
+  translate:-50% -50%;
+  text-align: center;
+  /* width:80%; */
+  padding: 1vw 2vw;
+  background-color: #222;
+  color:#fff;
+  border-radius: 1vw;
+  font-weight: 700;
+  font-size: min(2.4vw);
+}
